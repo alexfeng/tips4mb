@@ -24,3 +24,19 @@ mou file_name
 ```
 to open markdown file.
 
+---
+
+
+```
+#open Mou filename
+alias mou='open /Applications/Mou.app ' 
+
+#open TextEdit filename.c 
+alias te='open /Applications/TextEdit.app ' 
+
+#take a screenshot:
+# -W window mode -P preview after screenshot -S noShodow 
+alias sc='screencapture -iW -P -S  ' 
+
+```
+
