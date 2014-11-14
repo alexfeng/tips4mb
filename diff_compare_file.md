@@ -52,3 +52,7 @@ diff -c filename_1 filename_2
 ```
 diff -u filename_1 filename_2
 ```
+
+
+两个常用的, u 和y
+
