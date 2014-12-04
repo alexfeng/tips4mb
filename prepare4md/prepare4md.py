@@ -4,18 +4,28 @@ import os.path
 import sys
 
 path=os.getcwd()
+print "currentPath = " + path
 
 githubStringPostion = path.find("github/");
-
 pathLocal = path[githubStringPostion + 1 + 6 :]
-# print pathLocal
+print "pathLocal = " + pathLocal
 
-projectName = pathLocal[:pathLocal.find("/")]
-projectName = "https://github.com/urmyfaith" + projectName + "/tree/master"
-# print projectName
 
-pathOnGithubPart1 = pathLocal[pathLocal.find("/") + 1:]
-# print pathOnGithubPart1
+if(pathLocal.find("/") == -1 ):
+	projectName = pathLocal
+else:
+	projectName = pathLocal[:pathLocal.find("/")]
+print "projectName = " + projectName
+
+
+projectName = "https://github.com/urmyfaith/" + projectName + "/tree/master"
+print "projectName = " + projectName
+
+if(pathLocal.find("/") == -1):
+	pathOnGithubPart1 = ""
+else:
+	pathOnGithubPart1 = pathLocal[pathLocal.find("/") + 1:]
+print "pathOnGithubPart1 = " + pathOnGithubPart1
 
 
 
@@ -33,7 +43,8 @@ for file in files:
 
 	pathList =[];
 	pathList.append(projectName)
-	pathList.append(pathOnGithubPart1)
+	if( cmp("",pathOnGithubPart1)):
+		pathList.append(pathOnGithubPart1)
 	pathList.append(file)
 	linkAddress = '('+'/'.join(pathList) + ')'
 
@@ -57,6 +68,7 @@ f =open(file2write,'w')
 f.write(tableString)
 f.close
 
+os.system('open /Applications/Mou.app')
 os.system('open ' + file2write)
 
 
