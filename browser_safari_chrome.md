@@ -26,6 +26,7 @@ command+W关闭当前的标签
  
  control+tab
  cmmd + tab_number
-      
+ alt+ cmmd + ⟵/⟶ 
+     
  * history
 	* command + y
