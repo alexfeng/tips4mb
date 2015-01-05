@@ -29,9 +29,12 @@ zx:grep zx$ cat content.txt  | grep [a-z]
 不指定文件类型
 
 ```objectivec
-grep -E  "#define.*http" ./*	
+grep -rE  "#define.*http" ./*	
 ```
- | sort
+
+sort排序
+
+
 
 指定文件类型
 
@@ -45,5 +48,17 @@ find . -name "*.m" |  xargs  -n 10 grep -inrE "#define.*http"   > x.txt
 find . -name "*.m"  -print0 |  xargs  -n 10 -0 grep -inrE "#define.*http"   > x.txt
 ```
 
+-name 文件名
 
+-n  10 一次取出10条记录
+
+-0  空格问题
+
+-i 大小写忽略
+
+-n 显示行号
+
+-r  子目录
+
+-E 使用正则表达式 
 
