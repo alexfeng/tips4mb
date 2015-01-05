@@ -16,3 +16,16 @@
     16	showStorageOfDiretory.md
     17	solve_command_not_found.md
     18	terminal_tab_usage.md
+
+#define MAIN_SHOP_URL @"http://mps.manzuo.com/mps/cate?sid=(null)&id=0&cc=%@&pt=%@&ffst=%d&mnt=%d&st=-1&hs=1"
+#define SYSFONT [UIFont systemFontOfSize:12]
+
+#import "ZXViewController.h"
+#import "ZXHttpRequest.h"
+#import "GDataXMLNode.h"
+#import "ZXModel.h"
+#import "MJRefresh.h"
+#import "ZXTableViewCell.h"
+
+@interface ZXViewController ()<UITableViewDataSource,UITableViewDelegate,MJRefreshBaseViewDelegate>
+@

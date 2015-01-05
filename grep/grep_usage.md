@@ -22,3 +22,28 @@ zx:grep zx$ cat content.txt  | grep [a-z]
     18	terminal_tab_usage.md
 ```
 
+
+
+
+
+不指定文件类型
+
+```objectivec
+grep -E  "#define.*http" ./*	
+```
+ | sort
+
+指定文件类型
+
+```objectivec
+find . -name "*.m" |  xargs  -n 10 grep -inrE "#define.*http"   > x.txt
+```
+
+改进(路径中如果带空格的处理)
+
+```objectivec
+find . -name "*.m"  -print0 |  xargs  -n 10 -0 grep -inrE "#define.*http"   > x.txt
+```
+
+
+
