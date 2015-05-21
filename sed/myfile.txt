@@ -1,0 +1,13 @@
+foo bar foo bar
+foo bar foo bar
+foo bar foo bar
+
+this is line 4 END
+
+that is line 5 END
+
+this is line 6 END
+
+/usr/bin  /usr/local  /usr/lib /usr/share
+
+/usr/bin  /usr/local  /usr/lib /usr/share
